@@ -14,7 +14,8 @@
   [project]
   (json/generate-string
    {:directory (get-in project [:bower :directory] "resources/public/vendor")
-    :scripts (get-in project [:bower :scripts] {})}))
+    :scripts (get-in project [:bower :scripts] {})
+    :ignoredDependencies (get-in project [:bower :ignore-dependencies] [])}))
 
 (defn project->component
   [project]
